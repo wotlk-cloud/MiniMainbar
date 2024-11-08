@@ -1,0 +1,64 @@
+------------------------------------------------------------------------
+r23 | romig2 | 2010-08-18 05:34:43 +0000 (Wed, 18 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/core.lua
+
+Added a check for InCombatLockdown in the update GUI function to (hopefully) stop any taint stemming from the vehiclemenubar -> mainmenubar transition.  Tested on a gunship fight tonight and didn't have one failure to transition, so it looks promising.
+------------------------------------------------------------------------
+r22 | romig2 | 2010-08-14 00:47:46 +0000 (Sat, 14 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/core.lua
+
+Think I finally fixed the vehicle problem, I believe I was using the wrong function to block the main bar from updating.  Also added code to make VehicleMenuBar use the MainMenuBar scaling.
+------------------------------------------------------------------------
+r21 | romig2 | 2010-08-11 06:36:31 +0000 (Wed, 11 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/core.lua
+
+Was hooking into the thing, I think.  Had to hook into the PLAYER_LOSES_VEHICLE_DATA event.  Preliminary testing at the Argent tournament getting knocked off mounts by NPCs is promising.  I haven't had one failure to reload the main bar after transitioning from the vehicle bar.
+------------------------------------------------------------------------
+r20 | romig2 | 2010-08-11 02:35:01 +0000 (Wed, 11 Aug 2010) | 1 line
+Changed paths:
+   M /trunk/core.lua
+
+Yet another attempt to fix the vehicle/main bar swap issue where the main bar doesn't show back up.  I attempted to hook into MainMenuBar_ToPlayerArt and then force it to call my GUI refresh code from there.  After digging through Blizzard's code it looks like ToPlayerArt is the final function called after a player leaves a vehicle.
+------------------------------------------------------------------------
+r18 | romig2 | 2010-07-23 23:57:17 +0000 (Fri, 23 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/core.lua
+
+Bug-fix: Think I fixed the problem where if you were forced to dismount from a vehicle it wasn't placing the main bar in the right location.
+------------------------------------------------------------------------
+r16 | romig2 | 2010-07-20 00:16:18 +0000 (Tue, 20 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/bags.lua
+   M /trunk/core.lua
+   M /trunk/options.lua
+   M /trunk/pet.lua
+   M /trunk/pet.xml
+
+Show on mouseover now (mostly) working for the micromenu, bag bar, and pet bar.  The stance bar is a bit... different and will take more effort to get working right.
+------------------------------------------------------------------------
+r15 | romig2 | 2010-07-19 06:30:44 +0000 (Mon, 19 Jul 2010) | 5 lines
+Changed paths:
+   M /trunk/MiniMainBar.toc
+   M /trunk/bags.lua
+   M /trunk/bags.xml
+   M /trunk/core.lua
+   M /trunk/micromenu.lua
+   M /trunk/micromenu.xml
+   M /trunk/options.lua
+   M /trunk/stance.lua
+
+Added two slash command /mmb and /minimainbar which both open up to the options frame.
+
+Added a general section to the options menu so artwork and main bar scale can be controlled through the GUI.
+
+Added experimental show on mouse over for the micromenu and the bags bar.  Still looking into if how I did it is the best way to accomplish it.
+------------------------------------------------------------------------
+r14 | romig2 | 2010-07-17 02:06:50 +0000 (Sat, 17 Jul 2010) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Removed a line from .pkgmeta that will hopefully stop the Curse client from downloading Ace3 seperately from MiniMainBar.
+------------------------------------------------------------------------

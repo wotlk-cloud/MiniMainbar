@@ -1,0 +1,29 @@
+﻿## Interface: 30300
+## Author: Romig
+## Title: MiniMainBar - [|cffb1997fUltimoWoW|r]
+## Notes: 
+## OptionalDeps: Ace3
+## SavedVariables: MiniMainBarDB
+## X-Embeds: Ace3
+## X-Category: Action Bars
+## X-Curse-Packaged-Version: r14
+## X-Curse-Project-Name: MiniMainBar
+## X-Curse-Project-ID: minimainbar
+## X-Curse-Repository-ID: wow/minimainbar/mainline
+## X-Curse-Packaged-Version: r23
+## X-Curse-Project-Name: MiniMainBar
+## X-Curse-Project-ID: minimainbar
+## X-Curse-Repository-ID: wow/minimainbar/mainline
+
+
+embeds.xml
+core.lua
+options.lua
+micromenu.lua
+micromenu.xml
+bags.lua
+bags.xml
+pet.lua
+pet.xml
+stance.lua
+stance.xml
